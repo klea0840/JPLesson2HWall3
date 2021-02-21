@@ -10,6 +10,7 @@ public class Main {
         String newString;
         String str = "";
 
+        // TODO: найти ошибку внутри этого цикла
         for (int i = 0; i < s.size(); i++) {
             newString = s.get(i);
             for (int j = 0; j < newString.length(); j++) {
@@ -34,6 +35,7 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             str = sc.nextLine();
             stringList.add(i, str);
+            // Можно просто stringList.add(str), так ты добавляешь в конец списка
         }
         System.out.println(stringList);
 
