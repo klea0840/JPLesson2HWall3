@@ -21,9 +21,9 @@ public class Main {
         * вводятся строки, с помощью break.*/
         // TODO:
         //  1) убрать try-catch;
+        // done
         //  2) вынести вывод строк из тела цикла, в котором вводятся строки.
-        try {
-            while (sc.hasNext()) {
+        while (sc.hasNext()) {
                 String stringList = (String) sc.nextLine();
     //            System.out.println(strings);
 
@@ -33,20 +33,15 @@ public class Main {
                 * понятным. */
                 if (stringList.equalsIgnoreCase(end)) {
                     sc.close();
-                    Iterator<String> iter = strings.listIterator();
-                    while (iter.hasNext()) {
-                        String s = iter.next();
-                        System.out.println(s);
-                    }
-                    throw new Exception("The end");
+                    break;
                 } else {
                     strings.add(stringList);
     //                sc.nextLine();
                 }
             }
 
-        } catch (Exception e) {
-            System.out.println(e);
+        for (String s : strings) {
+            System.out.println(s);
         }
 
     }

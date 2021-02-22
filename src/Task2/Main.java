@@ -9,20 +9,21 @@ public class Main {
     public static void doubleValues(List<String> s) {
         String newString;
         String str = "";
+        List<String> newList = new ArrayList<>();
 
-        // TODO: найти ошибку внутри этого цикла
+        // TODO: найти ошибку внутри этого цикла// done
         for (int i = 0; i < s.size(); i++) {
             newString = s.get(i);
             for (int j = 0; j < newString.length(); j++) {
                 char c = newString.charAt(j);
-                str = String.valueOf(c) + Character.toString(c);
+                str = String.valueOf(c) + String.valueOf(c);
+                newList.add(str);
             }
-            s.set(i, str);
         }
-        System.out.println(s);
+        System.out.println(newList);
 
         for (String string:
-             s) {
+             newList) {
             System.out.println(string);
         }
     }
