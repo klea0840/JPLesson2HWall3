@@ -11,7 +11,13 @@ public class Main {
         String str = "";
         List<String> newList = new ArrayList<>();
 
-        // TODO: найти ошибку внутри этого цикла// done
+        // TODO: найти ошибку внутри этого цикла
+        //  Сейчас ты получаешь массив сдвоенных символов, т.е. при
+        //  вводе "abc" и "def" ты выводишь [aa, bb, cc, dd, ee, ff].
+        //  Сделай так, чтобы при вводе "abc" и "def" выводилось
+        //  [aabbcc, ddeeff], т.е. символы были сгруппированы по словам.
+        //  Т.е. тебе надо взять строку из списка, удвоить ее символы и
+        //  только потом запихивать в newList.
         for (int i = 0; i < s.size(); i++) {
             newString = s.get(i);
             for (int j = 0; j < newString.length(); j++) {
@@ -27,6 +33,7 @@ public class Main {
             System.out.println(string);
         }
     }
+
     public static void main(String[] args) {
         String str;
         List<String> stringList = new ArrayList<>();
@@ -42,5 +49,5 @@ public class Main {
 
         doubleValues(stringList);
     }
-    }
+}
 
