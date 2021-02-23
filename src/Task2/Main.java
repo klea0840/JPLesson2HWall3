@@ -22,9 +22,10 @@ public class Main {
             newString = s.get(i);
             for (int j = 0; j < newString.length(); j++) {
                 char c = newString.charAt(j);
-                str = String.valueOf(c) + String.valueOf(c);
-                newList.add(str);
+                str += String.valueOf(c) + String.valueOf(c);
             }
+            newList.add(str);
+            str = "";
         }
         System.out.println(newList);
 

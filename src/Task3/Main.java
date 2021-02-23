@@ -19,15 +19,16 @@ public class Main {
      * Сделай так, чтобы он принимал *только один* аргумент (число N) и возвращал
      * *новый (т.е. созданный внутри самого метода)* список.
      */
-    private static List<Integer> getIntegerList (Integer n,  List<Integer> listInt) {
+    private static List<Integer> getIntegerList (Integer n) {
         Integer num;
+        List<Integer> listInt = new LinkedList<>();
 
         System.out.println("Enter " + n + " number(s)");
 
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < n; i++) {
-            num = sc.nextInt();
+            num = (Integer) sc.nextInt();
             listInt.add(num);
         }
         return listInt;
@@ -58,11 +59,7 @@ public class Main {
 
         System.out.println("The number is " + number);
 
-        getIntegerList(number, listInt);
-
-        System.out.println(listInt);
-
-        System.out.println("The min value: " + getMinimum(listInt));
+        System.out.println("The min value: " + getMinimum(getIntegerList(number)));
     }
 }
 
